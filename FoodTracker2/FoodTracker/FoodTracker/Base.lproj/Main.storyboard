@@ -131,6 +131,9 @@
                                     <constraint firstAttribute="height" constant="30" id="bh5-jq-XoF"/>
                                 </constraints>
                                 <state key="normal" title="Recipe"/>
+                                <connections>
+                                    <action selector="recipeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0K0-Xq-cpV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

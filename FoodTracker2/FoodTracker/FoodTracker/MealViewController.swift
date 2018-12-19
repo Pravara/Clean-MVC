@@ -132,6 +132,15 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         present(imagePickerController, animated: true, completion: nil)
     }
     
+    @IBAction func recipeButtonTapped(_ sender: Any) {
+        
+        guard let selectedMeal = meal else {
+            fatalError("No meal selected")
+        }
+        let recipeController = RecipesViewController.init(meal: selectedMeal)
+        navigationController?.pushViewController(recipeController, animated: true)
+    }
+    
     //MARK: Private Methods
     
     private func updateSaveButtonState() {

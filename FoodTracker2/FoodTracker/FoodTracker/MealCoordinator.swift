@@ -14,6 +14,7 @@ protocol MealCoordinatorDelegate {
     
     func loadSampleMeals() -> [Meal]
     func save(meals: [Meal])
+    func showRecipeViewController(with meal: Meal) -> RecipesViewController
 }
 
 class MealCoordinator: MealCoordinatorDelegate{
@@ -43,6 +44,11 @@ class MealCoordinator: MealCoordinatorDelegate{
         }
     }
 
+    func showRecipeViewController(with meal: Meal) -> RecipesViewController {
+        
+        let recipeController = RecipesViewController.init(meal: meal)
+        return recipeController
+    }
     //MARK: Private Methods
     
     private func createSampleMeals() -> [Meal] {

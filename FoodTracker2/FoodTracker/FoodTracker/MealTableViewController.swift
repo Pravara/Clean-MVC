@@ -167,7 +167,7 @@ class MealTableViewController: UITableViewController {
             fatalError("Unexpected sender: \(String(describing: sender))")
         }
         let selectedMeal = meals[selectedButton.tag]
-        let recipeController = RecipesViewController.init(meal: selectedMeal)
+        let recipeController = mealCoordinator.showRecipeViewController(with: selectedMeal)
         navigationController?.pushViewController(recipeController, animated: true)
     }
 }
