@@ -10,6 +10,8 @@ import UIKit
 
 class RecipesViewController: UIViewController {
 
+    var meal: Meal?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

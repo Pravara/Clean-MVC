@@ -56,6 +56,7 @@ class MealTableViewController: UITableViewController {
         cell.nameLabel.text = meal.name
         cell.photoImageView.image = meal.photo
         cell.ratingControl.rating = meal.rating
+        cell.recipeButton.tag = indexPath.row
         
         return cell
     }
@@ -128,9 +129,16 @@ class MealTableViewController: UITableViewController {
             mealDetailViewController.meal = selectedMeal
             
         case "ShowRecipe":
-//            guard let recipeViewController = segue.destination as? RecipesViewController else {
-//                fatalError("Unexpected sender: \(String(describing: sender))")
-//            }
+            guard let recipeViewController = segue.destination as? RecipesViewController else {
+                fatalError("Unexpected sender: \(String(describing: sender))")
+            }
+            
+            guard let button = sender as? UIButton else {
+                fatalError("Unexpected sender: \(String(describing: sender))")
+            }
+            
+            let selectedMeal = meals[button.tag]
+            recipeViewController.meal = selectedMeal
             os_log("Showing the recipe.", log: OSLog.default, type: .debug)
             
         default:

@@ -37,7 +37,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ami-MF-hae" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ami-MF-hae" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
                                             <rect key="frame" x="137" y="49" width="252" height="44"/>
                                         </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryi-2f-0jQ">
@@ -64,6 +64,7 @@
                                     <outlet property="nameLabel" destination="bae-2p-rdI" id="g1D-Rd-ym8"/>
                                     <outlet property="photoImageView" destination="aMZ-eD-Qxa" id="m43-3H-WJs"/>
                                     <outlet property="ratingControl" destination="ami-MF-hae" id="KXb-iU-mNl"/>
+                                    <outlet property="recipeButton" destination="Ryi-2f-0jQ" id="W2M-97-ecD"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="ZRs-Hf-jfH"/>
                                 </connections>
                             </tableViewCell>
@@ -258,6 +259,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="T0D-Nl-uxD"/>
-        <segue reference="bye-1r-UsD"/>
+        <segue reference="ZRs-Hf-jfH"/>
     </inferredMetricsTieBreakers>
 </document>
